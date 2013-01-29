@@ -1,0 +1,155 @@
+
+@font-face
+{
+    font-family: trek;
+    src: url('resources/swiss911.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('resources/background.jpg');
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+/*
+#mainContainer div {
+    min-width: 10px;
+    min-height: 10px;
+    border: 1px solid red;
+}
+*/
+
+#testFrame {
+    margin: auto;
+    padding: 25px;
+    font-family: trek, "Arial Narrow", Arial;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+
+#banner {
+    font-family: trek, "Arial Narrow", Arial;
+    font-size: 48pt;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#optionsContainer {
+    position: relative;
+    margin: auto;
+    width: 800px;
+}
+
+#optionsContainer > div { /* Each Column */
+    float: left;
+    margin-right: 20px;
+    min-width: 200px;
+}
+
+#optionsContainer > div > * { /* Every element in the column */
+    margin-bottom: 3px;
+}
+
+.button {
+    width: 196px;
+    padding: 5px;
+    line-height: 15px;
+    border: 2px solid #888;
+    color: #888;
+    text-align: center;
+}
+
+.button:hover {
+    border-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+input.number {
+    width: 50px;
+}
+
+input[type=text] {
+    background-color: transparent;
+    border: 2px solid #888;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    color: #666;
+}
+
+input[type=text]:focus {
+    border: 2px solid black;
+    color: black;
+}
+
+#inputBorderTitle {
+    width: 100px;
+}
+
+.colorTheme {
+    clear: both;
+    line-height: 30px;
+}
+
+.colorSelector {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    background-image: url('libs/colorpicker/images/select3.png');
+    z-index: 10;
+}
+
+.colorTheme > .colorSelector {
+    float: left;
+}
+
+#borderThemesTable {
+    border-spacing: 5px;
+}
+
+#borderThemesTable tr td:first-child {
+    padding-right: 5px;
+    border-right: 2px solid #888;
+}
+
+.newColorButton {
+    width: 16px;
+    height: 16px;
+    background-image: url('resources/add-button.png');
+    vertical-align: middle;
+}
+
+.newColorButton:hover {
+    background-image: url('resources/add-button-hover.png');
+    cursor: pointer;
+}
+
+.colorClose {
+    width: 30px;
+    height: 16px;
+    background-image: url('resources/close-button.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.themeClose {
+    width: 16px;
+    height: 16px;
+    background-image: url('resources/close-button.png');
+    vertical-align: middle;
+}
+
+.colorClose:hover, .themeClose:hover {
+    background-image: url('resources/close-button-hover.png');
+    cursor: pointer;
+}
+
+#errorMessage {
+    font-weight: bold;
+    color: red;
+}

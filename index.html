@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="Christopher D. Cordisco">
+        
+        <title>LCARS Generator</title>
+        
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="libs/colorpicker/css/colorpicker.css">
+        
+        <script type="text/javascript" src="scripts/libs/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="libs/colorpicker/js/colorpicker.js"></script>
+        
+        <script type="text/javascript" src="scripts/control.js"></script>
+        <script type="text/javascript" src="scripts/generator.js"></script>
+        <script type="text/javascript" src="scripts/options.js"></script>
+        <script type="text/javascript" src="scripts/util/utils.js"></script>
+    </head>
+    <body>
+        <div id="mainContainer">
+            <div id="testFrameContainer">
+                <div id="testFrame">
+                    
+                </div>
+            </div>
+            <div id="banner">LCARS Generator</div>
+            <div id="optionsContainer">
+                <div>
+                    <div id="submitButton" class="button">Generate</div>
+                </div>
+                <div>
+                    <h3>Dimensions</h3>
+                    <p><input id="inputWidth" class="number" type="text" /> Width</p>
+                    <p><input id="inputHeight" class="number" type="text" /> Height</p>
+                    
+                    <br>
+                    
+                    <h3>Border Style</h3>
+                    <p><input id="inputBorderPadding" class="number" type="text" /> Padding</p>
+                    <p><input id="inputBorderTitle" type="text" /> Title</p>
+                    
+                    <h4>Top</h4>
+                    <p><input id="inputBorderTopHeight" class="number" type="text" /> Height</p>
+                    <p><input id="inputBorderTopBlockWidth" class="number" type="text" /> Block Width</p>
+                    <p><input id="inputBorderTopBlockVariance" class="number" type="text" /> Block Variance</p>
+                    
+                    <h4>Right</h4>
+                    <p><input id="inputBorderRightWidth" class="number" type="text" /> Width</p>
+                    <p><input id="inputBorderRightBlockHeight" class="number" type="text" /> Block Height</p>
+                    <p><input id="inputBorderRightBlockVariance" class="number" type="text" /> Block Variance</p>
+                    
+                    <h4>Bottom</h4>
+                    <p><input id="inputBorderBottomHeight" class="number" type="text" /> Height</p>
+                    <p><input id="inputBorderBottomBlockWidth" class="number" type="text" /> Block Width</p>
+                    <p><input id="inputBorderBottomBlockVariance" class="number" type="text" /> Block Variance</p>
+                    
+                    <h4>Left</h4>
+                    <p><input id="inputBorderLeftWidth" class="number" type="text" /> Width</p>
+                    <p><input id="inputBorderLeftBlockHeight" class="number" type="text" /> Block Height</p>
+                    <p><input id="inputBorderLeftBlockVariance" class="number" type="text" /> Block Variance</p>
+                </div>
+                <div>
+                    <h3>Colors</h3>
+                    <br>
+                    <h4>Main</h4>
+                    <div class="colorTheme">
+                        <div id="inputColorBackground" class="colorSelector"></div>Background
+                    </div>
+                    <div class="colorTheme">
+                        <div id="inputColorText" class="colorSelector"></div>Text
+                    </div>
+                    <br>
+                    <h4>Border Themes</h4>
+                    <table id="borderThemesTable">
+                        
+                    </table>
+                    <div id="newThemeButton" class="button">New Theme</div>
+                    <div id="errorMessage"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
