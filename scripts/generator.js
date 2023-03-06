@@ -212,7 +212,6 @@ Generator.generateHorizontalBorder = function (borderId, title) {
         // Yes, 1.36 is a magic number found by guess-and-check
         var text = '<text font-size="' + (options.height * 1.36) + '">' + title + '</text>';
         var textWidth = svgElementWidth(text);
-        console.log(textWidth)
         
         text = '<text x="' + (options.width - textWidth + x) + '" y="' + 
                 (options.y + options.height) + '" font-size="' + (options.height * 1.36) + 
