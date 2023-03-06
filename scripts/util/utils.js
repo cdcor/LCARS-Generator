@@ -69,7 +69,7 @@ var svgElementWidth = function (html) {
     
     var $elem = $(code).appendTo('body');
     
-    var width = $elem.find('text').width();
+    var width = $elem.find('text')[0].getBBox().width;
     $elem.remove();
     
     // A magic number fix for an inexplicable phenomena where this function returns a width 2.104x 
