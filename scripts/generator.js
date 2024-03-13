@@ -211,7 +211,7 @@ Generator.generateHorizontalBorder = function (borderId, title) {
     // Handle title first in order to subtract text width from full width
     if (title) {
         // Yes, 1.36 is a magic number found by guess-and-check
-        var text = '<text>' + title + '</text>';
+        var text = '<text>' + title.toUpperCase() + '</text>';
         var textWidth = svgElementWidth(text);
         
         text = '<text x="' + (options.width - textWidth + x) + '" y="' + 
