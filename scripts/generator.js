@@ -201,6 +201,7 @@ Generator.generate = function () {
 Generator.generateHorizontalBorder = function (borderId, title) {
     var options = Generator.options.border[borderId];
     var padding = Generator.options.border.padding;
+    Generator.options.magic = (options.height * 1.36); // make the magic text size accessible to other files
     
     // The only two options that will change in generating the blocks
     var x = options.x, remainingWidth = options.width;
@@ -210,7 +211,7 @@ Generator.generateHorizontalBorder = function (borderId, title) {
     // Handle title first in order to subtract text width from full width
     if (title) {
         // Yes, 1.36 is a magic number found by guess-and-check
-        var text = '<text font-size="' + (options.height * 1.36) + '">' + title + '</text>';
+        var text = '<text>' + title.toUpperCase() + '</text>';
         var textWidth = svgElementWidth(text);
         
         text = '<text x="' + (options.width - textWidth + x) + '" y="' + 
