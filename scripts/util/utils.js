@@ -72,7 +72,12 @@ var svgElementWidth = function (html) {
     var width = $elem.find('text')[0].getBBox().width;
     $elem.remove();
     
-    // A magic number fix for an inexplicable phenomena where this function returns a width 2.104x 
+    // what used to be a magic number fix for an inexplicable phenomena (now explained) where this function returns a width 2.104x 
     //   the actual width of the element
-    return width * 0.4752; 
+
+    // the reason why this was happening is because the 'font-family' tag wasn't defined in line 213 in generator.js
+    //   so it just used a default font to get the width of the element. this also caused some strange side effects
+    //   where the text area wouldn't be scaled properly depending on which characters were used, e.g. a lot of 1s would
+    //   cause it to be smaller than needed whereas a lot of Ws would cause it to be larger than needed.
+    return width // * 0.4752; 
 };
