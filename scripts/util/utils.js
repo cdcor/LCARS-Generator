@@ -65,7 +65,7 @@ var rgbToHash = function (rgb) {
  * @return {Number} the width
  */
 var svgElementWidth = function (html) {
-    var code = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="font-family:trek;font-size:'+ Generator.options.magic +'pt;">' + html + '</svg>';
+    var code = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="font-family:trek;font-size:'+ Generator.options.magic +'px;">' + html + '</svg>';
     
     var $elem = $(code).appendTo('body');
     
