@@ -65,7 +65,7 @@ var rgbToHash = function (rgb) {
  * @return {Number} the width
  */
 var svgElementWidth = function (html) {
-    var code = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' + html + '</svg>';
+    var code = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="font-family:trek;font-size:'+ Generator.options.magic +';">' + html + '</svg>';
     
     var $elem = $(code).appendTo('body');
     
@@ -75,9 +75,12 @@ var svgElementWidth = function (html) {
     // what used to be a magic number fix for an inexplicable phenomena (now explained) where this function returns a width 2.104x 
     //   the actual width of the element
 
-    // the reason why this was happening is because the 'font-family' tag wasn't defined in line 213 in generator.js
+    // the reason why this was happening is because the 'font-family' tag wasn't defined,
     //   so it just used a default font to get the width of the element. this also caused some strange side effects
     //   where the text area wouldn't be scaled properly depending on which characters were used, e.g. a lot of 1s would
     //   cause it to be smaller than needed whereas a lot of Ws would cause it to be larger than needed.
+
+    // UPDATED FIX
+    // moving css to the 'code' variable because it doesn't work properly in utils.js' 'text' variable
     return width // * 0.4752; 
 };
